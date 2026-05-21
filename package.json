@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "seed:admin": "node src/utils/createAdmin.js",
-    "vercel-build": "node prisma/vercel-build.js"
+    "seed:admin": "node src/utils/createAdmin.js"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "keywords": [],
   "author": "",
