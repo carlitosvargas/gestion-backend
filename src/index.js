@@ -8,7 +8,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: '*',
+  origin: 'https://gestioncv.vercel.app',
   credentials: true
 }));
 
