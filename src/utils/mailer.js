@@ -202,7 +202,7 @@ const enviarEmailCancelacion = async (emailDestino, datosReserva) => {
 };
 
 // Enviar correo de Bienvenida al Dueño
-const enviarEmailBienvenida = async (emailDestino, nombre) => {
+const enviarEmailBienvenida = async (emailDestino, nombre, frontendUrl = 'http://localhost:5173') => {
   if (!emailDestino) return;
 
   try {
@@ -220,7 +220,7 @@ const enviarEmailBienvenida = async (emailDestino, nombre) => {
         
         <p style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.5; margin-top: 2rem; text-align: center;">
           Una vez inicies sesión, podrás administrar tu sucursal, ver los turnos y servicios.<br><br>
-          <a href="https://gestion-frontend-cv.vercel.app/login" style="display: inline-block; padding: 10px 20px; background-color: #c9a063; color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;">Acceder a mi panel</a>
+          <a href="${frontendUrl}/login" style="display: inline-block; padding: 10px 20px; background-color: #c9a063; color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;">Acceder a mi panel</a>
         </p>
         
         <div style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; margin-top: 2.5rem; font-size: 0.8rem; color: #707070;">
