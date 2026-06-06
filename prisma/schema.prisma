@@ -74,5 +74,7 @@ model Turno {
   empresa     Empresa  @relation(fields: [empresaId], references: [id])
   fecha       DateTime
   estado      String   @default("PENDIENTE") // PENDIENTE, CONFIRMADO, CANCELADO, COMPLETADO
+  notificacionEnviada Boolean @default(false)
+  recordatorioEnviado Boolean @default(false)
   creadoEn    DateTime @default(now())
 }
